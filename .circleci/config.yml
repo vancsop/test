@@ -32,6 +32,7 @@ jobs:
           command: ./gradlew lint test
       - store_test_results:
           path: app/build/test-results
+          destination: test-results/
       - run:
           name: Initial build
           command: ./gradlew clean assembleRelease --no-daemon
